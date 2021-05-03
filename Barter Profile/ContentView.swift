@@ -8,14 +8,40 @@
 import SwiftUI
 
 struct ContentView: View {
+    let gradient = Gradient(colors: [.purple, .white])
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            HStack {
+                Spacer()
+                
+                VStack {
+                    Image("Barting 3")
+                        .resizable()
+                        .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                        .frame(width: 256, height: 256)
+                        .clipShape(Rectangle())
+                        .clipped()
+                        .padding(.top,44)
+                    
+                    Text("The Barter Shop") .font(.system(size:40)).bold().foregroundColor(.black)
+                        .padding(.top,12)
+                }
+                Spacer()
+            }
+            Spacer()
+                
+        }
+        
+        .background(LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom))
+        .edgesIgnoringSafeArea(.all)
+        
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    
+    
+    struct Content_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
 }
