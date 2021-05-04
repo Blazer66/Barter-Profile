@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let gradient = Gradient(colors: [.purple, .white])
+     let gradient = Gradient(colors: [.white, .yellow])
     var body: some View {
         VStack {
             HStack {
@@ -23,13 +23,15 @@ struct ContentView: View {
                         .clipped()
                         .padding(.top,44)
                     
-                    Text("The Barter Shop") .font(.system(size:40)).bold().foregroundColor(.black)
+                    Text("The Barter Shop")
+                        .font(.system(size:40)).bold().foregroundColor(.purple)
                         .padding(.top,12)
+                    
                 }
                 Spacer()
             }
+            
             Spacer()
-                
         }
         
         .background(LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom))
@@ -42,6 +44,8 @@ struct ContentView: View {
     struct Content_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()
+            
+            
         }
     }
 }
