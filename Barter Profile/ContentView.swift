@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-     let gradient = Gradient(colors: [.white, .yellow])
+    let gradient = Gradient(colors: [.white, .yellow])
     var body: some View {
         VStack {
             HStack {
